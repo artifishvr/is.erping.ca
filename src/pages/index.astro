@@ -2,6 +2,31 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="is they erpin">
-    <p>hi ill make this page work soon</p>
+<Layout title="is they erping????">
+    <main>
+        <div
+            class="flex flex-col justify-center items-center min-h-screen text-center"
+        >
+            <h1 class="font-bold text-2xl">is they erping????</h1>
+            <div class="flex mt-2 max-w-sm">
+                <input
+                    type="text"
+                    id="nameInput"
+                    placeholder="name"
+                    class="bg-zinc-900 text-white p-2 rounded-md rounded-r-none border-none"
+                />
+                <button
+                    class="bg-zinc-800 text-white p-2 rounded-md rounded-l-none border-none cursor-pointer"
+                    onclick="window.location.href='/' + document.getElementById('nameInput').value"
+                >
+                    check
+                </button>
+            </div>
+            <p class="text-sm max-w-md">
+                using our patented "seggs-erp-heartrategyroscope" technology, we
+                can determine if anyone is erping! just enter a name! (dont
+                worry about usernames, we'll find them)
+            </p>
+        </div>
+    </main>
 </Layout>
