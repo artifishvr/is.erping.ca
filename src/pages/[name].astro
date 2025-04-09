@@ -1,0 +1,15 @@
+---
+export const prerender = false;
+
+const { name } = Astro.params;
+---
+
+<p>{name} is probably erping</p>
+
+<form
+    method="get"
+    onsubmit="event.preventDefault(); window.location.href = '/' + document.getElementById('nameInput').value;"
+>
+    <input type="text" id="nameInput" placeholder="Enter a name" required />
+    <button type="submit">Check someone else</button>
+</form>
