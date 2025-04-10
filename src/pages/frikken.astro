@@ -1,33 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Search from "../components/Search.svelte";
 
 const title = `is frikken erping?????`;
 ---
 
 <Layout title={title}>
-  <main>
-    <div
-      class="flex flex-col justify-center items-center font-semibold min-h-screen text-center"
-    >
-      <p class="text-4xl">
-        frikken would never be erping hes wholesome and has fricked 0 people in
-        the past 3 months
-      </p>
-
-      <div class="flex mt-2 max-w-sm">
-        <input
-          type="text"
-          id="nameInput"
-          placeholder="name"
-          class="bg-zinc-900 text-white p-2 rounded-md rounded-r-none border-none"
-        />
-        <button
-          class="bg-zinc-800 text-white p-2 rounded-md rounded-l-none border-none cursor-pointer"
-          onclick="window.location.href='/' + document.getElementById('nameInput').value"
+    <main>
+        <div
+            class="flex flex-col justify-center items-center font-semibold min-h-screen text-center"
         >
-          check
-        </button>
-      </div>
-    </div>
-  </main>
+            <p class="text-4xl">
+                frikken would never be erping hes wholesome and has fricked 0
+                people in the past 3 months
+            </p>
+
+            <Search client:load />
+        </div>
+    </main>
 </Layout>

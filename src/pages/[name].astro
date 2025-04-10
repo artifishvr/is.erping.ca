@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Search from "../components/Search.svelte";
 
 export const prerender = false;
 
@@ -15,20 +16,7 @@ const title = `is ${name} erping?????`;
         >
             <p class="text-4xl">{name} is probably erping</p>
 
-            <div class="flex mt-2 max-w-sm">
-                <input
-                    type="text"
-                    id="nameInput"
-                    placeholder="name"
-                    class="bg-zinc-900 text-white p-2 rounded-md rounded-r-none border-none"
-                />
-                <button
-                    class="bg-zinc-800 text-white p-2 rounded-md rounded-l-none border-none cursor-pointer"
-                    onclick="window.location.href='/' + document.getElementById('nameInput').value"
-                >
-                    check
-                </button>
-            </div>
+            <Search client:load />
         </div>
     </main>
 </Layout>
